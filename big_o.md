@@ -50,6 +50,7 @@ The best complexity possible is O(1), called "constant time" or "constant space"
 ## Logarithmic Time
 
 O(log n) means that the input is being reduced by a percentage at every step (e.g., binary search).
+O(logn) means that somewhere in your algorithm, the input is being reduced by a percentage at every step. A good example of this is binary search, which is a searching algorithm that runs in O(log⁡n)O(logn) time . With binary search, we initially consider the entire input (n elements). After the first step, we only consider n / 2 elements. After the second step, we only consider n / 4 elements, and so on. At each step, we are reducing our search space by 50%, which gives us a logarithmic time complexity.
 
 ## Analyzing Space Complexity
 
