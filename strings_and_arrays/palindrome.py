@@ -1,4 +1,4 @@
-# Palindrome checker using two-pointer technique
+# Palindrome checker using two-pointer / pincer technique
 def check_if_palindrome(s: str):
     """Determine if a string reads the same forward and backward.
 
