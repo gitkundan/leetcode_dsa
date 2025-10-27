@@ -65,6 +65,22 @@ def square_and_sort_listcomp(arr: list[int]) -> list[int]:
     squared = [x**2 for x in arr]
     squared.sort()
     return squared
+
+def square_sort_deque(nums:list[int]):
+    from collections import deque
+    result = deque()
+    left, right = 0, len(nums) - 1
+
+    while left <= right:
+        if abs(nums[left]) >= abs(nums[right]):
+            result.appendleft(nums[left]**2)
+            left += 1
+        else:
+            result.append(nums[right]**2)
+            right += 1
+
+    return list(result)
+
 if __name__ == "__main__":
     test_cases = [
         [-4, -1, 0, 3, 10],
@@ -78,4 +94,5 @@ if __name__ == "__main__":
         print(f"Two-pointer: {square_and_sort(test)}")
         print(f"Naive sorted: {square_and_sort_naive(test)}")
         print(f"Listcomp sorted: {square_and_sort_listcomp(test)}")
+        print(f"Listcomp sorted: {square_sort_deque(test)}")
         print()
